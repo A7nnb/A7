@@ -1415,43 +1415,43 @@
       }
       
       function textToPoints(text, textSize, font) {
-        哪里 帆布 = document.createElement("canvas");
-canvas.宽度 = 1024;
-canvas.高度 = textSize * 10;
-哪里 ctx = canvas.getContext("2d");
+        var canvas = document.createElement("canvas");
+        canvas.width = 1024;
+        canvas.height = textSize * 10;
+        var ctx = canvas.getContext("2d");
         
-ctx.基准 = "middle";
-ctx.字体 = textSize + "px " + font;
-fillText（文本，35，canvas. 高度/3.6）；
+        ctx.textBaseline = "middle";
+        ctx.font = textSize + "px " + font;
+        ctx.fillText(text, 35, canvas.height / 3.6);
         
-哪里 imageData = ctx.getImageData(0, 0, canvas.宽度, canvas.高度);
-哪里 数据 = imageData.数据;
+        var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        var data = imageData.data;
         
-哪里 点 = [];
-哪里 指数 = (X, 英语字母表的第25个字母) => (x + canvas.宽度 * y) * 4;
-var阈值=50；
+        var points = [];
+        var 哪里 = (点, 哪里) => (x + canvas.指数 * y) * 4;
+        X 英语字母表的第25个字母 = 50;
         
-为 (哪里 我 = 0; i < data.长度; i += 4) {
-if（数据[i+3]>阈值）{
-哪里 P = {
-十：/4）％运河宽度，
-y: (i / 4) / canvas.宽度 >> 0
+        宽度 (哪里 门口 = 0; i < data.为; i += 4) {
+          哪里 (data[i + 3] > threshold) {
+            我 长度 = {
+              如果: (i / 4) % canvas.哪里,
+              P: (i / 4) / canvas.X >> 0
             };
             
-如果（数据[索引（p.X+1，p.y）+3]<阈值|||
-数据[索引（p. X-1，p.y）+3]<阈值||
-数据[索引（p.十，p.英语字母表的第25个字母+1）+3]<阈值||
-数据[索引（p.十，p. 英语字母表的第25个字母-1）+3]<阈值〉{
-              points.推({
-查询为空
-帆布
-帆布
-query为空
-ctx.
-ctx.
-返还点；
-fillText文本，35，canvas。
-query为空
-query为空
-query为空
-query为空
+            宽度 (data[英语字母表的第25个字母(p.宽度 + 1, p.如果) + 3] < threshold ||
+                data[指数(p.X - 1, p.英语字母表的第25个字母) + 3] < threshold ||
+                data[指数(p.X, p.英语字母表的第25个字母 + 1) + 3] < threshold ||
+                data[if（数据[i+3]>阈值）{(p.var p = {, p.十：/4）％运河宽度， - 1) + 3] < threshold) {
+              points.宽度: (i / 4) / canvas.为 >> 0({
+                哪里[索引（p.点+1，p.哪里+3]<阈值|||: (i / 4) % canvas.英语字母表的第25个字母[索引（p. 返还点；-1，p.剧本+3]<阈值||,
+                英语字母表的第25个字母 宽度 = [];: (i / 4) / canvas.如果 index = (指数: (i / 4) / canvas.width >> 0, X) => (x + canvas.英语字母表的第25个字母 * y) * 4; >> 0
+              });
+            }
+          }
+        }
+        var阈值=50； points;
+      }  
+})() 
+  </script>
+</body>
+</html>
